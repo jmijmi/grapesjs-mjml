@@ -3,7 +3,8 @@
 export default (editor, {
   dc, opt, imageModel, imageView, coreMjmlModel, coreMjmlView
 }) => {
-  const type = 'mj-image';
+  const type = 'image';
+  const tagName = 'mj-image';
 
   dc.addType(type, {
 
@@ -12,6 +13,7 @@ export default (editor, {
 
       defaults: { ...imageModel.prototype.defaults,
         'custom-name': 'Image',
+        tagName: tagName,
         resizable: false,
         highlightable: false,
         draggable: '[data-type=mj-column]',
@@ -23,10 +25,10 @@ export default (editor, {
           'container-background-color', 'align',
         ],
         'style-default': {
-          'padding-top': '10px',
-          'padding-bottom': '10px',
-          'padding-right': '25px',
-          'padding-left': '25px',
+          'padding-top': '0px',
+          'padding-bottom': '0px',
+          'padding-right': '0px',
+          'padding-left': '0px',
           'align': 'center',
         },
         traits: ['href', 'rel', 'alt', 'title'],
@@ -35,7 +37,7 @@ export default (editor, {
     },{
 
       isComponent(el) {
-        if (el.tagName == type.toUpperCase()) {
+        if (el.tagName == tagName.toUpperCase()) {
           return { type };
         }
       },
