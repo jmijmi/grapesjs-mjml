@@ -32,7 +32,7 @@ export default (editor, {
           'align': 'center',
         },
         traits: ['href', 'rel', 'alt', 'title'],
-        void: true,
+        void: false,
       },
     },{
 

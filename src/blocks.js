@@ -56,13 +56,8 @@ export default (editor, opt = {}) => {
 
   bm.add('mj-image', {
     label: 'Image',
-    category: 'Basic',
+    content: '<mj-image src="http://placehold.it/350x250/78c5d6/fff/img.jpg"></mj-image>',
     attributes: { class: 'gjs-fonts gjs-f-image' },
-    content: {
-      style: { color: 'black' },
-      type: 'image',
-      activeOnRender: 1
-    },
     category: categoryContent,
   });
 
